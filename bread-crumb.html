@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bread crumb</title>
+    <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
+    <style>
+        body,div,ul,li,a{margin: 0; padding: 0}
+        ul{list-style: none;}
+        .bread{
+            margin: 100px 0 0 30px;
+            overflow: hidden;
+            width: 100%;
+        }
+        .bread li {
+            float: left;
+            list-style: none;
+            margin: 0 .5em 0 1em;
+        }
+        .bread li a {
+            float: left;
+            text-decoration: none;
+            text-align: center;
+            color: #444;
+            background-color: #ECECEC;
+            padding: 10px 20px 10px 45px;
+            position: relative;
+        }
+        .bread li a:hover{
+            background-color: #bbbbbb;
+            color: #fff;
+        }
+
+        .bread li a::before{
+            content: "";
+            position: absolute;
+            top:50%;
+            margin-top: -1.5em;
+            border-width: 1.5em 0 1.5em 1em;
+            border-style: solid;
+            border-color: #ECECEC #ECECEC #ECECEC transparent;
+            left: -1em;
+        }
+
+        .bread li a:hover::before{
+            border-color: #bbbbbb #bbbbbb #bbbbbb transparent;
+        }
+        .bread li a::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-top: -1.5em;
+            border-top: 1.5em solid transparent;
+            border-bottom: 1.5em solid transparent;
+            border-left: 1em solid #ECECEC;
+            right: -1em;
+        }
+
+        .bread li a:hover::after{
+            border-left-color: #bbbbbb;
+        }
+        .bread li:first-child a::before{
+            display: none;
+        }
+        .bread li:first-child a {
+            padding:10px;
+        }
+
+        /*图标设置*/
+        .bread li a .icon-llreservenavidown {
+            margin-left: 6px;
+        }
+
+        .drop   {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 8px;
+            background-color: #444;
+            position: relative;
+            top: 3px;
+            left: 3px;
+        }
+        .drop .triangle{
+            width:0;
+            height:0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 6px solid #ffffff;
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-top: -2px;
+            margin-left: -5px;
+            z-index: 99;
+        }
+    </style>
+</head>
+<body>
+    <ul class="bread">
+        <li><a href="#"><i class="iconfont icon-zhuyedisc"></i></a></li>
+        <li><a href="#">Wedding Party Dresses <span class="drop"><i class="triangle"></i></span></a></li>
+        <li><a href="#" >Bridesmaid Dresses</a></li>
+    </ul>
+    <div class="fixed"></div>
+    <div style="margin: 50px"></div>
+</body>
+</html>
